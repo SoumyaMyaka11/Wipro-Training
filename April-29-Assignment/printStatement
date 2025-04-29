@@ -1,0 +1,23 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int age = 22;
+        string name = "soumya";
+        bool isStudent = true;
+        double fee = 100000.0;
+        
+        Console.WriteLine("age: "+age);
+        Console.WriteLine("name: "+name);
+        Console.WriteLine("is student: "+isStudent);
+        Console.WriteLine("fee: "+fee);
+        
+       // another way to print 
+        Console.WriteLine($"age: {age}");
+        Console.WriteLine($"name: {name}");
+        Console.WriteLine($"is student: {isStudent}");
+        Console.WriteLine($"fee: {fee}");
+        
+    }
+}
