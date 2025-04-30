@@ -6,7 +6,11 @@ public class Grade
     {
         for(int i=1; i<=10; i++)
         {
-            Console.WriteLine("square of "+i+" is "+i*i);
+           int square = i*i;
+            if(square>100)
+                 break;
+            Console.WriteLine("square of "+i+" is "+square);
+                 
         }
     }
 }
