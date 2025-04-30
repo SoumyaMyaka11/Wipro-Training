@@ -1,6 +1,6 @@
 using System;
 
-public class Methods
+public class LinearSearch
 {
    static int linearSearch(int[] arr, int search)
    {
