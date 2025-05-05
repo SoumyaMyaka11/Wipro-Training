@@ -1,0 +1,8 @@
+CREATE PROCEDURE HigherEndProducts
+AS
+BEGIN 
+     SELECT * FROM Products WHERE ProductPrice>60000;
+END;
+
+EXEC  HigherEndProducts;
+
