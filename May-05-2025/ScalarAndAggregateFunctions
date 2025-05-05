@@ -1,0 +1,59 @@
+CREATE TABLE STUDENT (
+  StudentID INT PRIMARY KEY,
+  FirstName VARCHAR(50),
+  Marks INT,
+  DOB DATE
+  );
+
+  INSERT INTO STUDENT(StudentID, FirstName, Marks, DOB)
+  VALUES
+  (1,'Amit', 92, '2003-05-10'),
+  (2, 'Neha', 78, '2002-11-15'),
+  (3, 'Rahul', 61, '2004-01-20'),
+  (4, 'Sneha', 49, '2003-09-01');
+
+  CREATE TABLE Employees (
+  EmpID INT PRIMARY KEY,
+  EmpName VARCHAR(50),
+  Department VARCHAR(50),
+  Salary DECIMAL(10,2),
+  JoinDate DATE
+  );
+
+  INSERT INTO Employees (EmpID, EmpName, Department, Salary, JoinDate)
+  VALUES
+  (1, 'John', 'HR', 50000, '2021-06-01'),
+  (2, 'Priya', 'Finance', 60000, '2020-09-15'),
+  (3, 'Amit', 'IT', 75000, '2019-01-10'),
+  (4, 'Sara', 'IT', 72000, '2023-02-25');
+
+SELECT FirstName, UPPER(FirstName)  AS UpperName FROM STUDENT;
+
+  SELECT FirstName, DATEDIFF(YEAR , DOB,GETDATE()) AS AGE FROM STUDENT;
+
+  SELECT EmpName , ROUND(Salary,-3) AS RoundedSalary FROM Employees;
+
+  SELECT COUNT(*) AS TotalStudents FROM STUDENT;
+
+  SELECT AVG(MARKS) AS AvgMarks from STUDENT;
+
+  SELECT Department, MAX(Salary) AS HighestSalary
+  FROM Employees
+  GROUP BY Department;
+
+   SELECT FirstName, Marks,
+    CASE
+	   WHEN Marks>=90 THEN 'A'
+	   WHEN Marks>=75 THEN 'B'
+	   WHEN Marks>=60 THEN 'C'
+	   ELSE 'D'
+	END AS Grade
+FROM STUDENT;
+
+SELECT EmpName, Salary,
+    CASE
+	   WHEN Salary>=70000 THEN 'HIGH'
+	   WHEN Salary>=50000 THEN 'MEDIUM'
+	   ELSE 'LOW'
+	END AS SalaryBand
+FROM Employees;
