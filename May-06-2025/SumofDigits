@@ -1,0 +1,19 @@
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int num = 1234;
+        Console.WriteLine($"sum of digits of {num} is {SumOfDigitsOfNum(num)}");
+    }
+
+    static int SumOfDigitsOfNum(int num)
+    {
+        int sum = 0;
+        while (num != 0)
+        {
+            sum = sum + num % 10;
+            num = num / 10;
+        }
+        return sum;
+    }
+}
