@@ -1,0 +1,23 @@
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] arr = { 10, 25, 30, 5, 60 };
+        Console.WriteLine($"second maximum element in array is {FindSecondMax(arr)}");
+    }
+
+    static int FindSecondMax(int[] arr)
+    {
+        int max = 0, second_max = 0;
+        for(int x=0; x<arr.Length; x++)
+        {
+            if (arr[x] > max )
+            {
+                second_max = max;
+              max = arr[x];
+            }
+            
+        }
+        return second_max;
+    }
+}
