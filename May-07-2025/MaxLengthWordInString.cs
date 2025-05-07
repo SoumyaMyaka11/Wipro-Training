@@ -7,23 +7,33 @@ class Program
         Console.WriteLine(MaxLenOfWordInString(str));
     }
 
-    static string MaxLenOfWordInString(string str)
+        static string MaxLenOfWordInString(string str)
     {
         string[] str1 = str.Split(" ");
         int max_length = 0;
         string result = "";
-        for (int x=0; x<str1.Length; x++)
+        foreach (String str2 in str1)
         {
-            if (str1[x].Length > max_length)
+            int length = str2.Length;
+            if(length >= max_length)
             {
-                max_length = str1[x].Length;
-                result = result + str1[x];
-            }
-            else if (str1[x].Length >= max_length)
-            {
-                result = result + " " +str1[x] ;
+                if(length > max_length)
+                {
+                    max_length = length;
+                    result = str2;
+
+                }
+                else if(length >= max_length)
+                {
+                    max_length = length;
+                    result = result + " " + str2;
+                }
             }
         }
         return result;
     }
+
+    
+
+    
 }
