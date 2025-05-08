@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+class Program
+{
+    public  static void Main(string[] args)
+    {
+        Dictionary<string, string> phone = new Dictionary<string, string>
+        {
+              { "keerthi", "1234567897"},
+              { "Soumya", "7894567897"},
+              { "Harshika", "3334567897"},
+              { "Harshitha", "9876567897" },
+              { "Ramya", "9987567897" }
+        };
+
+        phone["Soumya"] = "9876543217";
+
+        if (phone.ContainsKey("Soumya"))
+            Console.WriteLine("contact is present");
+        else
+            Console.WriteLine("contact not present");
+
+        foreach (var pair in phone)
+        {
+            Console.WriteLine($"\nNAME: {pair.Key} and CONTACT: {pair.Value}");
+        }
+
+    }
+}
