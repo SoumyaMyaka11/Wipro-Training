@@ -1,21 +1,30 @@
 using System;
-using System.Collections;
+class student
+{
+    public int Rollnumber;
+    public string Name;
+    public int Marks;
+
+    public void PrintDetails()
+    {
+        Console.WriteLine($"Rollnumber : {RollNumber}");
+        Console.WriteLine($"RollNumber : {Name}");
+        Console.WriteLine($"Marks : {Marks}";)
+    }
+}
 
 class Program
 {
-    public  static void Main(string[] args)
+    static void Main()
     {
-        List<int> numbers = new List<int> { 1, 2, 4, 3, 5, 6, 2, 3, 4, 1, };
+        //instantiation
+        Student student1 = new Student();
 
-        HashSet<int> uniquenums = new HashSet<int>(numbers);
+        student1.RollNumber = 1;
+        student1.Name = "Swetha";
+        student1.Marks = 88;
 
-        int count = uniquenums.Count;
-        Console.WriteLine("unique numbers count is " + count);
+        student1.PrintDetails();
 
-        Console.WriteLine("unique numbers in the list are");
-        foreach (int num in uniquenums)
-        {
-            Console.Write(num + " ");
-        }
     }
 }
