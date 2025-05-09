@@ -25,6 +25,12 @@ class Program
         student1.Name = "Swetha";
         student1.Marks = 88;
 
-        student1.PrintDetails();
+         //Inline instantiation
+         Student student2 = new Student { RollNumber = 1, Name = "Swetha", Marks = 88 };
+          Student student3 = new Student { RollNumber = 2, Name = "Ayat", Marks = 90 };
+
+         student1.PrintDetails();
+         student2.PrintDetails();
+         student3.PrintDetails();
     }
 }
