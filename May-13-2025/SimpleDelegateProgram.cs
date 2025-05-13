@@ -14,6 +14,17 @@ namespace Linq_Project
                 return x + y;
             }
 
+            public static void ConsolePrint(int x)
+            {
+                Console.WriteLine($"consoleprints: {x}");
+            }
+
+            public static void PrinterPrint(int x)
+            {
+                Console.WriteLine($"printerprints : {x} ");
+            }
+
+
             static void Main()
             {
                 SomeOperation Add;
@@ -27,7 +38,13 @@ namespace Linq_Project
                 Func<int, int, int> Add = Sum;
 
                 int res = Add(15, 10);
-                Console.WriteLine(res);     
+                Console.WriteLine(res);  
+
+                Action<int> printconsole = ConsolePrint;
+                Action<int> printprinter = PrinterPrint;
+
+                printconsole(10);
+                printconsole(19);          
             }
         }
     }
