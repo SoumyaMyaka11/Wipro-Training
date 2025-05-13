@@ -21,13 +21,15 @@ namespace Linq_Project
         static void Main()
         {
             //create an instance of custom delegate
-            CustomDel hiDel, byeDel, multiDel;
+            CustomDel hiDel, byeDel, multiDel, multiMinusDel;
 
             hiDel = Hello;
 
             byeDel = GoodBye;
 
             multiDel = hiDel + byeDel;
+
+             multiMinusDel = multiDel - hiDel;
 
             Console.WriteLine("Invoking delegate hiDel");
             hiDel("A");
@@ -37,6 +39,9 @@ namespace Linq_Project
 
             Console.WriteLine("Invoking delegate multiDel");
             multiDel("C");
+
+            Console.WriteLine("Invoking delgate multiMinusDel");
+            multiMinusDel("D");
         }
     }
 }
