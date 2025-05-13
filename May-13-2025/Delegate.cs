@@ -14,7 +14,7 @@ namespace Linq_Project
 
         static void GoodBye(string s)
         {
-            Console.WriteLine($"Hello , {s}");
+            Console.WriteLine($"GoodBye , {s}");
         }
 
 
