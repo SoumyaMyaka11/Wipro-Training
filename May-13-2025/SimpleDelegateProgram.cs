@@ -22,6 +22,12 @@ namespace Linq_Project
 
                 int res = Add(4, 3);
                 Console.WriteLine(res);
+
+                //another /latest way to represent a delegate
+                Func<int, int, int> Add = Sum;
+
+                int res = Add(15, 10);
+                Console.WriteLine(res);     
             }
         }
     }
