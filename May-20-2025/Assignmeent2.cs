@@ -65,9 +65,8 @@ namespace ConsoleApp5
             int search = arr[rand.Next(arr.Length)];
             Console.WriteLine("search element is : " + search);
 
-            Stopwatch swlinear = Stopwatch.StartNew();
             int linear = LinearSearch(arr, search, out int linearComparisions);
-            swlinear.Stop();
+            
 
             Console.WriteLine("\nLINEAR SEARCH");
             if (linear != -1)
@@ -75,8 +74,8 @@ namespace ConsoleApp5
             else
                 Console.WriteLine("array element not found");
 
-             Console.WriteLine($"comparisions : {linearComparisions}");
-            Console.WriteLine($"Time : {swlinear.ElapsedTicks} ticks ({swlinear.Elapsed.TotalMilliseconds} ms)");
+            Console.WriteLine($"comparisions : {linearComparisions}");
+            
 
 
             //binary search
@@ -86,11 +85,11 @@ namespace ConsoleApp5
 
             Console.WriteLine("\ngenerated array is");
             Console.WriteLine(string.Join(",", arr1));
+
             int search1 = arr1[rand1.Next(arr1.Length)];
             Console.WriteLine("search element is : " + search1);
-            Stopwatch swbinary = Stopwatch.StartNew();
             int binary = BinarySearch(arr1, search1, out int binaryComparisions);
-            swbinary.Stop();
+        
 
             Console.WriteLine("BINARY SEARCH");
             if (binary != -1)
@@ -99,7 +98,7 @@ namespace ConsoleApp5
                 Console.WriteLine("array element not found");
 
             Console.WriteLine($"comparisions : {binaryComparisions}");
-            Console.WriteLine($"Time : {swbinary.ElapsedTicks} ticks ({swbinary.Elapsed.TotalMilliseconds} ms)");
+           
 
         }
     }
