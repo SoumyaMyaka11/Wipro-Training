@@ -86,11 +86,11 @@ namespace ConsoleApp5
             }
         }
 
-       /* public static void Main()
+        public static void Main()
         {
             Console.WriteLine("Enter Value of N:");
             int n = Convert.ToInt32(Console.ReadLine());
             NQueensAlgo(n);
-        }*/
+        }
     }
 }
