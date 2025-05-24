@@ -4,9 +4,6 @@ using System.Diagnostics;
 
 namespace ConsoleApp7
 {
-    using System;
-    using System.Diagnostics;
-    using System.Threading.Tasks;
 
     class Program
     {
