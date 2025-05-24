@@ -3,8 +3,6 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp7
 {
-    using System;
-    using System.Threading.Tasks;
 
     class Program
     {
