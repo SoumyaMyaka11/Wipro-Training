@@ -5,9 +5,6 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp7
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
 
     public class Program
     {
