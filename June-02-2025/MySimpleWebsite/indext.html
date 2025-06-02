@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width==device-width,initial-scale=1.0"/>
+    <title>My Simple Website</title>
+    <link rel="stylesheet" href="Style.css"/>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <header id="home">
+        <h1>Welcome to My Website</h1>
+        <p>Explore basic HTML, CSS and JavaScript!</p>
+        <button id="clickBtn">Click Me!</button>
+        <p id="message"></p>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This is simple website built without ASP.NET using pure frontend technologies. It demonstrates hoe to stucture a webpage , add styles, and create interactions using JavaScript.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>you can contact us through email, mobile and through form</p>
+        <p>Email:contact@gmail.com</p>
+        <p>Mobile:+91 9876543217</p>
+        <h3>Form</h3>
+        <form id="contactForm">
+            
+                <input type="text" placeholder="Your Name" required/><br /><br />
+            
+            
+                <input type="email" placeholder="Your Email" required/><br /><br />
+           
+                <textarea placeholder="Your Message"  required></textarea><br /><br />
+            
+               <button type="submit">Submit</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    
+
+    <footer>
+        <p>&copy;2025 My Simple Website</p>
+    </footer>
+
+    <script src="Script.js"></script>
+
+</body>
+</html>
